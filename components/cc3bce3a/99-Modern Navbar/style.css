@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #181920;
+    --bg-gradient: radial-gradient(circle at 50% 0%, #2a2d3a 0%, #131419 100%);
+
+    /* orange accent theme */
+    --orange-primary: #ff6b35;
+    --orange-hover: #ff8254;
+    --orange-glow: rgba(255, 107, 53, 0.4);
+
+    /* Glassmorphism details */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.12);
+
+    /* Text Colors */
+    --text-white: #ffffff;
+    --text-muted: #a1a1a1;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: var(--bg-main);
+    background-image: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-white);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.header{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 0 24px;
+}
+
+.navbar{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Brand Logo Style */
+.nav-brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.brand-icon{
+    width: 36px;
+    height: 36px;
+    background: var(--orange-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px var(--orange-glow);
+}
+
+.brand-name span{
+    color: var(--orange-primary);
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navLinks{
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navLinks i{
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+/* Link Hover & Active state */
+
+.navLinks:hover,
+.navLinks.active{
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navLinks:hover i,
+.navLinks.active i{
+    opacity: 1;
+    color: var(--orange-primary);
+}
+
+.navLinks:hover{
+    transform: translateY(-2px);
+}
+
+/* call to action button */
+.nav-cta{
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    background: var(--orange-primary);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px var(--orange-glow);
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover{
+    background: var(--orange-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--orange-glow);
+}
+
+/* Section Design */
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-card{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    padding: 40px 60px;
+    border-radius: 24px;
+    max-width: 600px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.section-card h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-card h2 span{
+    color: var(--orange-primary);
+}
+
+.section-card p{
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}

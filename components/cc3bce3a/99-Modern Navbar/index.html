@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navbar | CodeByGaurav</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <!-- add style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <!-- Brand Logo -->
+            <a href="#home" class="nav-brand">
+                <span class="brand-icon"><i class="fa-solid fa-code"></i></span>
+                <span class="brand-name">CodeBy <span>Gaurav</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-menu">
+                <a href="#home" class="navLinks active">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+                <a href="#services" class="navLinks">
+                    <i class="fa-solid fa-layer-group"></i> Services
+                </a>
+                <a href="#about" class="navLinks">
+                    <i class="fa-solid fa-user"></i> About
+                </a>
+                <a href="#contact" class="navLinks">
+                    <i class="fa-solid fa-paper-plane"></i> Contact
+                </a>
+                <a href="#blog" class="navLinks">
+                    <i class="fa-solid fa-newspaper"></i> Blog
+                </a>
+            </div>
+            <!-- Call to Action Button -->
+            <a href="#contact" class="nav-cta">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="home">
+        <div class="section-card">
+            <h2>Welcome to <span>Home Page</span></h2>
+            <p>Building high-quality UI experience with modern web technologies.</p>
+        </div>
+    </section>
+    <section id="services">
+        <div class="section-card">
+            <h2>our <span>Services</span></h2>
+            <p>High-end Web Development, UIUX Design & Brand identity</p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-card">
+            <h2>About <span>CodeByGaurav</span></h2>
+            <p>Crafting modern digital solutions with passion and precision</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section-card">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Let's build something extraordinary together.</p>
+        </div>
+    </section>
+    <section id="blog">
+        <div class="section-card">
+            <h2>Latest <span>Articles</span></h2>
+            <p>Insights, tutorials, and deep-dives into modern web design</p>
+        </div>
+    </section>
+</body>
+<script>
+
+    const navLinks = document.querySelectorAll(".navLinks");
+
+    navLinks.forEach((link)=>{
+        link.addEventListener("click", function() {
+            navLinks.forEach((item)=>{
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+        })
+    })
+
+</script>
+</html>

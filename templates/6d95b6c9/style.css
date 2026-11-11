@@ -1,0 +1,145 @@
+body {
+  background: #050014;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#fuegos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carta {
+  background: transparent;
+  border: none;
+  padding: 25px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.corazon {
+  font-size: 55px;
+  animation: latir 1.5s infinite;
+  filter: drop-shadow(0 0 12px #ff1493);
+}
+
+.instruccion {
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 17px;
+  animation: latir 1.5s infinite;
+  text-shadow: 0 0 10px #ff1493;
+}
+
+.frase {
+  display: none;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff1493, 0 0 10px white;
+  animation: aparecer 0.6s forwards;
+}
+
+.c1 {
+  color: #ff69b4;
+}
+
+.c2 {
+  color: #d8b4fe;
+}
+
+.c3 {
+  color: #fde68a;
+}
+
+.grande {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.final {
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff1493, #ffd700, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fin {
+  display: none;
+  color: #ff69b4;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.final-corazon {
+  display: none;
+  margin: 25px auto 10px auto;
+  width: 280px;
+  height: 280px;
+  position: relative;
+  animation: aparecer 1s forwards;
+  clip-path: path('M 140 260 C 20 180 0 110 0 70 C 0 20 40 0 70 0 C 100 0 125 20 140 50 C 155 20 180 0 210 0 C 240 0 280 20 280 70 C 280 110 260 180 140 260 Z');
+  background: #ff1493;
+}
+
+.foto-corazon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-corazon {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px #ff1493, 0 0 5px black;
+}
+
+.texto-corazon p {
+  margin: 2px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes latir {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(1.15);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
